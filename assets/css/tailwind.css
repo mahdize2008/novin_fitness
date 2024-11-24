@@ -1,0 +1,36 @@
+@import 'generic/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html , body {
+        direction: rtl;
+        text-align: right;
+        @apply font-['dana'] min-h-screen overflow-x-hidden bg-natural
+    }
+    input,textarea{
+        @apply outline-none
+    }
+
+
+    .mb-between-section{
+        @apply mb-24
+    }
+    .mt-between-section{
+        @apply mt-24
+    }
+    .my-between-section{
+        @apply my-24
+    }
+    .pb-between-section{
+        @apply pb-24
+    }
+    .pt-between-section{
+        @apply pt-24
+    }
+    .py-between-section{
+        @apply py-24
+    }
+}

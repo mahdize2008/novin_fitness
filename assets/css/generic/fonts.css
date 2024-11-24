@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "dana";
+    src: url('/fonts/dana/dana-black.woff');
+    font-weight: 850;
+  }
+  @font-face {
+    font-family: "dana";
+    src: url('/fonts/dana/dana-bold.woff');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "dana";
+    src: url('/fonts/dana/dana-extrabold.woff');
+    font-weight: 750;
+  }
+  @font-face {
+    font-family: "dana";
+    src: url('/fonts/dana/dana-light.woff');
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "dana";
+    src: url('/fonts/dana/dana-medium.woff');
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "dana";
+    src: url('/fonts/dana/dana-regular.woff');
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "dana";
+    src: url('/fonts/dana/dana-semibold.woff');
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: "dana";
+    src: url('/fonts/dana/dana-thin.woff');
+    font-weight: 100;
+  }
