@@ -18,7 +18,7 @@ let {title,subtitle,center}=defineProps({
     <GenericTitle size="lg" :class="{'justify-center':center}">
       {{title}}
     </GenericTitle>
-    <div class="text-dark text-base font-medium mt-2" v-if="subtitle">
+    <div class="text-dark lg:text-base text-xs font-medium mt-2" v-if="subtitle">
       {{subtitle}}
     </div>
   </div>

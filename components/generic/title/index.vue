@@ -36,16 +36,16 @@ let {size,tag}=defineProps({
 
 <style>
 .title-public{
-    @apply text-2xl font-semibold flex items-center
+    @apply lg:text-2xl text-sm font-semibold flex items-center
 }
 
 
 /* SHAPE */
 .title-public .shape{
-    @apply w-0.5 h-7 bg-warning ml-2.5 rounded-full
+    @apply w-0.5 h-7 bg-warning lg:ml-2.5 ml-2 rounded-full
 }
 .title-public .shape.shape-circle{
-    @apply !w-2.5 !h-2.5
+    @apply lg:!w-2.5 !w-1.5 lg:!h-2.5 !h-1.5
 }
 
 
@@ -78,7 +78,7 @@ let {size,tag}=defineProps({
 
 /* SIZE */
 .title-lg{
-    @apply text-4xl
+    @apply lg:text-4xl text-base
 }
 .title-sm{
     @apply text-lg

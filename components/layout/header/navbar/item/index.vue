@@ -10,7 +10,7 @@ let {to,text}=defineProps({
 </script>
 
 <template>
-    <NuxtLink :to="to" class="px-2 py-1 text-white text-base font-semibold hover:text-secondary">
+    <NuxtLink :to="to" class="px-2 py-1 text-white lg:text-base text-sm font-semibold hover:text-secondary">
         {{text}}
     </NuxtLink>
 </template>

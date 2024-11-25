@@ -15,7 +15,7 @@ function changeAccordion(number){
 
 <template>
   <ul>
-    <GenericAccordionItem class="mb-4 last:mb-0" v-for="(item, index) in items" :isActive="activeId===index+1" :id="index+1" :title="item.title" :text="item.text" :key="index" @changeAccordion="(number) => changeAccordion(number)"/>
+    <GenericAccordionItem class="lg:mb-4 mb-3 last:mb-0" v-for="(item, index) in items" :isActive="activeId===index+1" :id="index+1" :title="item.title" :text="item.text" :key="index" @changeAccordion="(number) => changeAccordion(number)"/>
   </ul>
 </template>
 
