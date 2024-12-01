@@ -1,5 +1,5 @@
 <script setup>
-let { avatar , name , comment}=defineProps({
+let { avatar , name , comment ,username}=defineProps({
   avatar:{
     type:String,
     default:null

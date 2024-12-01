@@ -5,6 +5,13 @@ let filters = [
   { title: "تغذیه ", filter: "feeding" },
   { title: "آشپزی ", filter: "cooking" },
 ];
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+
+
+const { data:articles, pending, error, refresh } = await useFetch(
+  "https://cms.nf-developer.ir/api/v1/posts/labels/latest?count=10"
+);
 </script>
 
 <template>
@@ -22,7 +29,7 @@ let filters = [
       >
         مشاهده همه مقالات
       </GenericBtn>
-      <swiper-container :slides-per-view="4"
+      <Swiper :slides-per-view="4"
         :breakpoints="{
           320: {
             slidesPerView: 'auto',
@@ -40,22 +47,10 @@ let filters = [
         loop
         class="!overflow-visible w-full lg:mt-12 mt-6"
       >
-        <swiper-slide class="max-lg:max-w-[230px]">
-          <GenericArticle />
-        </swiper-slide>
-        <swiper-slide class="max-lg:max-w-[230px]">
-          <GenericArticle />
-        </swiper-slide>
-        <swiper-slide class="max-lg:max-w-[230px]">
-          <GenericArticle />
-        </swiper-slide>
-        <swiper-slide class="max-lg:max-w-[230px]">
-          <GenericArticle />
-        </swiper-slide>
-        <swiper-slide class="max-lg:max-w-[230px]">
-          <GenericArticle />
-        </swiper-slide>
-      </swiper-container>
+        <SwiperSlide class="max-lg:max-w-[230px]" v-for="(article , index) in articles.posts" :key="index">
+          <GenericArticle :picture="article.picture" :title="article.title" :created_at="article.created_at" :description="article.description" :view="article.number_visit" :to="article.id"/>
+        </SwiperSlide>
+      </Swiper>
     </div>
   </div>
 </template>

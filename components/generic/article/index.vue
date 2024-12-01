@@ -1,19 +1,18 @@
 <script setup>
-let { to, img, title, text, data, view, author } = defineProps({
+let { to, picture, title, description, created_at, view, author } = defineProps({
   to: {
     type: String,
-    default: "/",
   },
-  img: {
+  picture: {
     type: String,
   },
   title: {
     type: String,
   },
-  text: {
+  description: {
     type: String,
   },
-  data: {
+  created_at: {
     type: String,
   },
   view: {
@@ -27,23 +26,23 @@ let { to, img, title, text, data, view, author } = defineProps({
 </script>
 
 <template>
-  <NuxtLink class="block bg-white rounded-2.5xl overflow-hidden shadow-lighter-shadow" :to="to">
-    <img src="/img/img-12.png" class="w-full lg:h-[173px] h-[150px]" alt="">
+  <NuxtLink class="block bg-white rounded-2.5xl overflow-hidden shadow-lighter-shadow" :to="`/articles/${to}`">
+    <img :src="picture" class="w-full lg:h-[173px] h-[150px]" alt="">
     <div class="p-4">
         <h2 class="lg:text-sm text-xs font-semibold lg:h-[42px] h-[36px] line-clamp-2 lg:mb-2.5 mb-1.5">
-            رژیم ماکرو شماری - چیزهایی که قبل از شروع رژیم ماکرو باید بدانیم.
+            {{title}}
         </h2>
         <p class="lg:text-xs text-3xs text-dark/70 font-medium lg:h-[54px] h-[45px] lg:mb-5 mb-3 line-clamp-3">
-            مردم به دلایل زیادی گیاه‌خوار ‌می‌شوند، از جمله سلامتی، اعتقادات مذهبی، نگرانی در مورد رفاه حیوانات یا استفاده از آنتی بیوتیک‌ها و ...
+            {{description}}
         </p>
         <ul class="flex items-center">
             <li class="flex items-center lg:text-2xs text-4xs text-dark leading-none ml-3 last:ml-0">
                 <GenericIcon name="calendar" class="lg:text-xs-plus text-2xs ml-1"/>
-                ۷ بهمن ۱۴۰۱
+                {{created_at}}
             </li>
             <li class="flex items-center lg:text-2xs text-4xs text-dark leading-none ml-3 last:ml-0">
                 <GenericIcon name="show" class="lg:text-xs-plus text-2xs ml-1"/>
-                ۵۰ بازدید
+                {{view}} بازدید
             </li>
         </ul>
     </div>
