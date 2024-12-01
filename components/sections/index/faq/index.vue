@@ -1,4 +1,7 @@
-
+<script setup>
+let baseData = useState("baseData");
+let accordionItems=ref(baseData.value.app_services_faq)
+</script>
 
 <template>
   <div>
@@ -12,6 +15,6 @@
         </GenericTitle>
         <img src="/img/shape.png" class="max-sm:hidden" alt="">
       </div>
-      <GenericAccordion/>
+      <GenericAccordion :items="accordionItems"/>
     </div>
 </template>

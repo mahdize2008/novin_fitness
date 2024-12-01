@@ -71,7 +71,7 @@ let {size,tag}=defineProps({
 .title-white{
     @apply text-white
 }
-.title-dark .mark{
+.title-white .mark{
     @apply text-dark
 }
 
