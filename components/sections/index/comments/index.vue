@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
     <div class="flex max-md:flex-wrap items-center">
       <div class="flex items-center md:ml-auto max-md:mb-6">
@@ -11,7 +7,3 @@
       <SectionsIndexCommentsItems class="md:w-[57%] w-full"/>
     </div>
 </template>
-
-<style>
-
-</style>
