@@ -1,9 +1,9 @@
 <script setup>
 let baseData = useState("baseData", () => {});
-const { data, pending, error, refresh } = await useFetch(
+let { data, error } = await useFetchData(
   "http://cms.nf-developer.ir/api/v1/options"
 );
-baseData.value=data.value.options
+baseData.value = data?.options;
 </script>
 
 <template>

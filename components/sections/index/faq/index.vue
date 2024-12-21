@@ -1,6 +1,6 @@
 <script setup>
 let baseData = useState("baseData");
-let accordionItems=ref(baseData.value.app_services_faq)
+let accordionItems=baseData.value?.app_services_faq
 </script>
 
 <template>
@@ -15,6 +15,6 @@ let accordionItems=ref(baseData.value.app_services_faq)
         </GenericTitle>
         <img src="/img/shape.png" class="max-sm:hidden" alt="">
       </div>
-      <GenericAccordion :items="accordionItems"/>
+      <GenericAccordion v-if="accordionItems && accordionItems.length" :items="accordionItems"/>
     </div>
 </template>
