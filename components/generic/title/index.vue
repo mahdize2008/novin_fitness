@@ -1,5 +1,5 @@
 <script setup>
-let {size,tag}=defineProps({
+let {size,tag,theme,shape,shapeCircle,bold}=defineProps({
     size:{
         type:String,
         default:'md'
