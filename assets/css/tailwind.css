@@ -16,21 +16,21 @@
 
 
     .mb-between-section{
-        @apply lg:mb-24 mb-12
+        @apply lg:mb-20 mb-12
     }
     .mt-between-section{
-        @apply lg:mt-24 mt-12
+        @apply lg:mt-20 mt-12
     }
     .my-between-section{
-        @apply lg:my-24 my-12
+        @apply lg:my-20 my-12
     }
     .pb-between-section{
-        @apply lg:pb-24 pb-12
+        @apply lg:pb-20 pb-12
     }
     .pt-between-section{
-        @apply lg:pt-24 pt-12
+        @apply lg:pt-20 pt-12
     }
     .py-between-section{
-        @apply lg:py-24 py-12
+        @apply lg:py-20 py-12
     }
 }

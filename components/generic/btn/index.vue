@@ -1,5 +1,17 @@
 <script setup>
-let { size, theme,tag,to,outline,square, rounded,lightness, iconName, iconPathCount } = defineProps({
+let {
+  size,
+  theme,
+  tag,
+  to,
+  outline,
+  square,
+  rounded,
+  lightness,
+  iconLeftSide,
+  iconName,
+  iconPathCount,
+} = defineProps({
   size: {
     type: String,
     default: "base",
@@ -10,7 +22,7 @@ let { size, theme,tag,to,outline,square, rounded,lightness, iconName, iconPathCo
   },
   tag: {
     type: String,
-    default: "NuxtLink",
+    default: "button",
   },
   to: {
     type: String,
@@ -31,6 +43,10 @@ let { size, theme,tag,to,outline,square, rounded,lightness, iconName, iconPathCo
     type: Boolean,
     default: false,
   },
+  iconLeftSide: {
+    type: Boolean,
+    default: false,
+  },
   iconName: {
     type: String,
   },
@@ -42,6 +58,33 @@ let { size, theme,tag,to,outline,square, rounded,lightness, iconName, iconPathCo
 </script>
 
 <template>
+  <nuxtLink
+    :to="to"
+    class="btn"
+    :class="[
+      { 'btn-lightness': lightness },
+      { 'btn-outline': outline },
+      { 'btn-square': square },
+      { 'btn-rounded': rounded },
+      `btn-${theme}`,
+      `btn-${size}`,
+    ]"
+    v-if="tag === 'nuxtLink'"
+  >
+    <GenericIcon
+      :name="iconName"
+      :path-count="iconPathCount"
+      v-if="iconName && !iconLeftSide"
+      :class="{ 'ml-2': !square }"
+    />
+    <slot />
+    <GenericIcon
+      :name="iconName"
+      :path-count="iconPathCount"
+      v-if="iconName && iconLeftSide"
+      :class="{ 'mr-2': !square }"
+    />
+  </nuxtLink>
   <component
     :is="tag"
     :to="to"
@@ -54,9 +97,21 @@ let { size, theme,tag,to,outline,square, rounded,lightness, iconName, iconPathCo
       `btn-${theme}`,
       `btn-${size}`,
     ]"
+    v-else
   >
+    <GenericIcon
+      :name="iconName"
+      :path-count="iconPathCount"
+      v-if="iconName && !iconLeftSide"
+      :class="{ 'ml-2': !square }"
+    />
     <slot />
-    <GenericIcon :name="iconName" :path-count="iconPathCount" v-if="iconName" :class="{'mr-2' : !square}" />
+    <GenericIcon
+      :name="iconName"
+      :path-count="iconPathCount"
+      v-if="iconName && iconLeftSide"
+      :class="{ 'mr-2': !square }"
+    />
   </component>
 </template>
 
@@ -102,7 +157,7 @@ let { size, theme,tag,to,outline,square, rounded,lightness, iconName, iconPathCo
 
 /* SIZE */
 .btn-lg {
-  @apply h-14;
+  @apply lg:h-14 h-10;
 }
 .btn-sm {
   @apply h-6;

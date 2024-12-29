@@ -37,9 +37,11 @@ module.exports = {
 
       dark:'#263238',
       'dark-alpha':'#292D32',
+      'dark-beta':'#5d5d5d',
 
       natural:'#f9f9f9',
       'natural-alpha':'#DFDFDF',
+      'natural-beta':'#D9D9D933',
     },
     fontWeight: {
       thin: '100',
@@ -92,6 +94,7 @@ module.exports = {
       'primary-shadow': '0px 3px 4px 0px rgba(0, 0, 0, 0.25)',
       'lighter-shadow': '0px 2px 4px 0px rgba(0, 0, 0, 0.05)',
       'light-shadow': '0px 2px 2px 0px rgba(0, 0, 0, 0.1)',
+      'dark-shadow': '0px 4px 4px 0px rgba(0, 0, 0, 0.05);',
     },
     extend: {
       borderRadius:{

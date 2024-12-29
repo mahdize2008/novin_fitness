@@ -11,12 +11,10 @@ function changeBackdrop() {
 }
 </script>
 
-
 <template>
-  <header class="bg-primary-gradient relative">
+  <header class="shadow-dark-shadow">
     <GenericBackdrop @tochBackground="changeBackdrop()" :isActive="BackdropActive" />
     <LayoutHeaderMenu :isActive="menuActive" @closeMenu="changeMenu()" />
-    <LayoutHeaderTop @changeMenuButton="changeMenu()" />
-    <LayoutHeaderMain />
+    <LayoutPagesHeaderTop @changeMenuButton="changeMenu()"/>
   </header>
 </template>

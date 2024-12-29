@@ -23,7 +23,7 @@ let {isActive,question,answer,id}=defineProps({
       {{ question }}
       <GenericIcon class="mr-auto text-dark lg:text-2xs text-3xs !font-bold" :name="isActive ? 'up' : 'down'" />
     </div>
-    <p class="lg:px-7 p-4 lg:pb-6 lg:pt-2 pt-0 lg:text-sm text-2xs text-dark font-medium hidden group-[&.active]:block transition-all">
+    <p v-if="answer && answer?.length" class="lg:px-7 p-4 lg:pb-6 lg:pt-2 pt-0 lg:text-sm text-2xs text-dark font-medium hidden group-[&.active]:block transition-all">
         {{ answer }}
     </p>
   </li>

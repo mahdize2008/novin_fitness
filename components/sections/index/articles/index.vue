@@ -32,7 +32,7 @@ let { data:articles, error } = await useFetchData(
       </GenericBtn>
       <Swiper
         :slides-per-view="4"
-        v-if="articles.posts && articles.posts.length"
+        v-if="articles?.posts && articles?.posts?.length"
         :breakpoints="{
           320: {
             slidesPerView: 'auto',

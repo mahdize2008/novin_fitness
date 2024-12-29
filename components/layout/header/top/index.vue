@@ -5,8 +5,8 @@ let navItems = [
     text: "خانه",
   },
   {
-    to: "/",
-    text: "خانه",
+    to: "/calculator",
+    text: "محاسبه گرها",
   },
   {
     to: "/",

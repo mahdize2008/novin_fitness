@@ -29,7 +29,7 @@ function setAvatar(){
   <div class="bg-white shadow-light-shadow lg:px-8 lg:py-6 p-4">
     <div class="flex items-center lg:mb-5 mb-3">
         <img :src="setAvatar()" class="lg:w-[65px] w-[45px] lg:h-[65px] h-[45px] rounded-full ml-3" alt="">
-        <h2 class="lg:text-base text-sm font-semibold text-dark">
+        <h2 v-if="name && name?.length" class="lg:text-base text-sm font-semibold text-dark">
             {{name}}
         </h2>
     </div>

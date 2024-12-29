@@ -11,7 +11,7 @@ let aboutUs = baseData.value?.about_us;
       alt=""
     />
     <div class="flex items-start max-lg:hidden">
-      <p class="text-white text-md font-medium w-[55%] ml-24">
+      <p class="text-white text-md font-medium w-[55%] ml-24" v-if="aboutUs && aboutUs?.length">
         {{ aboutUs }}
       </p>
       <div class="grow">
@@ -22,7 +22,7 @@ let aboutUs = baseData.value?.about_us;
           action=""
           class="bg-white flex items-center rounded-2xl overflow-hidden pl-3 w-full"
         >
-          <GenericInput />
+          <GenericInput size="large" />
           <button
             type="submit"
             class="bg-primary-dark rounded-xl text-white px-4 h-10 shrink-0"
